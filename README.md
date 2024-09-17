@@ -2,7 +2,14 @@
 
 [Text Generation Inference](https://huggingface.co/docs/text-generation-inference/index) (TGI) is a toolkit created by Hugging Face for deploying and serving Large Language Models (LLMs). TGI takes care of downloading models, running quantized versions of them, and distributing them over multiple GPUs.
 
-This repository contains a guide for installing it on Snellius, where we can take advantage of 4-GPU nodes.
+Once TGI is running, it behaves like a **server** listening for language completion requests. These can be sent from your Python code, using
+- HTTP requests
+- A HuggingFace [Inference Client](https://huggingface.co/docs/huggingface_hub/package_reference/inference_client#huggingface_hub.InferenceClient)
+- The OpenAI Python API
+
+The last one is interesting because if you were already making calls to OpenAI with their Python API, you can reuse your code by simply redirecting it to the TGI server running on Snellius. See more info for making requests to the TGI server [here](https://huggingface.co/docs/text-generation-inference/basic_tutorials/consuming_tgi).
+
+This repository contains a guide for installing TGI on Snellius, where we can take advantage of 4-GPU nodes.
 
 **Why not use a Docker image?**
 The easiest way to run TGI is to download their preconfigured Docker image. This, however, requires installing the NVIDIA Container Toolkit, which to the best of my knowledge is not available on Snellius. The alternative then is to download and build the source code.
