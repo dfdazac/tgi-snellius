@@ -1,6 +1,6 @@
 # TGI on Snellius
 
-[Text Generation Inference](TGI) (TGI) is a toolkit created by Hugging Face for deploying and serving Large Language Models (LLMs). TGI takes care of downloading models, running quantized versions of them, and distributing them over multiple GPUs.
+[Text Generation Inference](https://huggingface.co/docs/text-generation-inference/index) (TGI) is a toolkit created by Hugging Face for deploying and serving Large Language Models (LLMs). TGI takes care of downloading models, running quantized versions of them, and distributing them over multiple GPUs.
 
 This repository contains a guide for installing it on Snellius, where we can take advantage of 4-GPU nodes.
 
